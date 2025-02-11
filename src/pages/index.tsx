@@ -19,8 +19,7 @@ export default function Home({ products }: { products: any[] }) {
       </Head>
 
       <HomePageStyles>
-        <LeftNavbar />
-        <div style={{ display: "flex" }}>
+        <div className="product-home-container">
           {products.map((product) => (
             <div key={product.id}>
               <HomeProductCard 

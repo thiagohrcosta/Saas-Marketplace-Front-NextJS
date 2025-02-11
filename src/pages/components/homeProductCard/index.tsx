@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { HomeProductCartContainer } from "./style"
 import { FormatCurrency } from "@/utils/formatCurrency"
+import Link from "next/link"
 
 type homeProductsCardProps = {
   id: string
@@ -29,16 +30,18 @@ export function HomeProductCard({
 }: homeProductsCardProps) {
   return (
     <HomeProductCartContainer>
-      <Image 
-        src={photos}
-        alt={name}
-        width={160}
-        height={220}
-      />
-      <div className="product-info">
-        <p className="product-name">{name}</p>
-        <p className="product-price">$ {FormatCurrency(price)}</p>
-      </div>
+      <Link href={`/products/${id}`}>
+        <Image 
+          src={photos}
+          alt={name}
+          width={160}
+          height={220}
+        />
+        <div className="product-info">
+          <p className="product-name">{name}</p>
+          <p className="product-price">$ {FormatCurrency(price)}</p>
+        </div>
+      </Link>
     </HomeProductCartContainer>
   )
 }

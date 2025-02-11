@@ -7,6 +7,10 @@ export const HomeProductCartContainer = styled.div`
   max-width: 160px;
   height: 320px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   img {
     border-radius: 8px 8px 0 0;
   }

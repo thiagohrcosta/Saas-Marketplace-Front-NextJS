@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 export const HomePageStyles = styled.div`
   display: flex;
+
+  .product-home-container {
+    margin-left: 50px;
+    display: flex;
+    gap: 16px;
+  }
 `;
 
 export const ProductHomeStyles = styled.div`
@@ -10,4 +16,8 @@ export const ProductHomeStyles = styled.div`
   gap: 10px;
   padding: 20px;
 
+`;
+
+export const HomePageStylesWithLeftBar = styled.div`
+  display: flex;
 `;

@@ -1,5 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { Navbar } from "./components/Navbar";
+import { LeftNavbar } from "./components/leftNavbar";
+import { HomePageStylesWithLeftBar } from "./styles/homeStyle";
 
 export default function Document() {
   return (
@@ -7,7 +9,10 @@ export default function Document() {
       <Head />
       <body>
         <Navbar />
-        <Main />
+        <HomePageStylesWithLeftBar >
+          <LeftNavbar />
+          <Main />
+        </HomePageStylesWithLeftBar>
         <NextScript />
       </body>
     </Html>
