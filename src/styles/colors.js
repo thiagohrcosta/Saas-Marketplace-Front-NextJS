@@ -1,8 +1,10 @@
-export const globalColors = {
+export const GlobalColors = {
   primary: '#E8DB7D',
   
   background: '#EFF7FF',
 
+  whiteText: '#EFF7FF',
+  
   gray200: '#4F5D75',
   gray500: '#2D3142',
 

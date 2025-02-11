@@ -1,20 +1,28 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import { Navbar } from "./components/Navbar";
-import { LeftNavbar } from "./components/leftNavbar";
-import { HomePageStylesWithLeftBar } from "./styles/homeStyle";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Navbar from './components/Navbar';
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Navbar />
-        <HomePageStylesWithLeftBar >
-          <LeftNavbar />
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="pt-br">
+        <Head>
+          {/* Aqui você pode adicionar outras tags meta ou links externos */}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                /* Configuração para evitar problemas com styled-components SSR */
+                body { margin: 0; font-family: sans-serif; }
+              `,
+            }}
+          />
+        </Head>
+        <body>
           <Main />
-        </HomePageStylesWithLeftBar>
-        <NextScript />
-      </body>
-    </Html>
-  );
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
+
+export default MyDocument;

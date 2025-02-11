@@ -36,6 +36,7 @@ export function HomeProductCard({
           alt={name}
           width={160}
           height={220}
+          priority
         />
         <div className="product-info">
           <p className="product-name">{name}</p>
